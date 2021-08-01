@@ -1,7 +1,13 @@
 use std::io;
 
+use rand::Rng;
+
 fn main() {
     println!("Guess Number Game!");
+
+    let secret_number = rand::thread_rng().gen_range(1..101);
+
+    println!("Secret Number is: {}", secret_number);
 
     println!("Please guess a number: ");
 
@@ -9,5 +15,5 @@ fn main() {
 
     io::stdin().read_line(&mut guess).expect("Invalid line content!");
 
-    println!("Number: {} is what you guessed", guess.trim());
+    println!("Number You Guess is: {}", guess.trim());
 }
