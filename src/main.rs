@@ -8,4 +8,9 @@ fn main() {
 
     const MAX_POINTS: u32 = 100_000;
     println!("MAX_POINTS is {}", MAX_POINTS);
+
+    let spaces = "     ";
+    let spaces = spaces.len();
+
+    println!("{}", spaces);
 }
