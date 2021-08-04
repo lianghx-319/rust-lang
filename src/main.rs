@@ -13,4 +13,6 @@ fn main() {
     let spaces = spaces.len();
 
     println!("{}", spaces);
+
+    let guess = "42".parse().expect("Not a number");
 }
