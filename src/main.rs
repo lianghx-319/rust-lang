@@ -18,7 +18,7 @@ fn main() {
     println!("{}", guess);
 
     // number
-    let decimal = 98_222u8;
+    let decimal = 98_222u32;
     let hex = 0xff;
     let octal = 0o77;
     let binary = 0b1111_0000;
