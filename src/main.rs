@@ -1,24 +1,19 @@
-struct User {
-    username: String,
-    email: String,
-    sign_in_count: u64,
-    active: bool,
+#[derive(Debug)]
+struct Rectangle {
+    width: u32,
+    length: u32,
 }
-
-struct Color(i32, i32, i32);
-struct Point(i32, i32, i32);
 
 fn main() {
-    let user = build_user(String::from("a@b.com"), String::from("Han"));
+    let rect = Rectangle {
+        width: 30,
+        length: 50,
+    };
+    println!("{}", area(&rect));
 
-    println!("user: {}", user.email);
+    println!("{:#?}", rect);
 }
 
-fn build_user(email: String, username: String) -> User {
-    User {
-        username,
-        email,
-        sign_in_count: 0,
-        active: true,
-    }
+fn area(rect: &Rectangle) -> u32 {
+    rect.width * rect.length
 }
