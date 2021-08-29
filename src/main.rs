@@ -5,6 +5,9 @@ struct User {
     active: bool,
 }
 
+struct Color(i32, i32, i32);
+struct Point(i32, i32, i32);
+
 fn main() {
     let user = build_user(String::from("a@b.com"), String::from("Han"));
 
